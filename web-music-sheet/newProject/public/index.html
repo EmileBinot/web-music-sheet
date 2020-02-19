@@ -1,0 +1,107 @@
+<html>
+<head>
+  <title>/</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/javascripts/jquery-3.4.1.js"></script>
+</head>
+<body>
+<div id="container">
+  <div id="control_panel">
+
+      <a class="button" value="PLAY" id="play" href="#">PLAY</a>
+      <a class="button" value="STOP" id="stop" href="#">STOP</a>
+      <a class="button" value="CLEAR" id="clear" href="#">CLEAR</a>
+      <div class="slidecontainer">
+        <input type="range" min="50" max="100" value="75" class="slider" id="speed">
+      </div>
+  </div>
+  <div id="input_panel">
+    <table>
+      <tr>
+        <td><input id="notes" type="radio" name="t1" value="U"></input></td>
+        <td><input id="notes" type="radio" name="t2" value="U"></input></td>
+        <td><input id="notes" type="radio" name="t3" value="U"></input></td>
+        <td><input id="notes" type="radio" name="t4" value="U"></input></td>
+        <td><input id="notes" type="radio" name="t5" value="U"></input></td>
+        <td><input id="notes" type="radio" name="t6" value="U"></input></td>
+        <td><input id="notes" type="radio" name="t7" value="U"></input></td>
+        <td><input id="notes" type="radio" name="t8" value="U"></input></td>
+      </tr>
+      <tr>
+        <td><input id="notes" type="radio" name="t1" value="B"></input></td>
+        <td><input id="notes" type="radio" name="t2" value="B"></input></td>
+        <td><input id="notes" type="radio" name="t3" value="B"></input></td>
+        <td><input id="notes" type="radio" name="t4" value="B"></input></td>
+        <td><input id="notes" type="radio" name="t5" value="B"></input></td>
+        <td><input id="notes" type="radio" name="t6" value="B"></input></td>
+        <td><input id="notes" type="radio" name="t7" value="B"></input></td>
+        <td><input id="notes" type="radio" name="t8" value="B"></input></td>
+      </tr>
+      <tr>
+        <td><input id="notes" type="radio" name="t1" value="A"></input></td>
+        <td><input id="notes" type="radio" name="t2" value="A"></input></td>
+        <td><input id="notes" type="radio" name="t3" value="A"></input></td>
+        <td><input id="notes" type="radio" name="t4" value="A"></input></td>
+        <td><input id="notes" type="radio" name="t5" value="A"></input></td>
+        <td><input id="notes" type="radio" name="t6" value="A"></input></td>
+        <td><input id="notes" type="radio" name="t7" value="A"></input></td>
+        <td><input id="notes" type="radio" name="t8" value="A"></input></td>
+      </tr>
+      <tr>
+        <td><input id="notes" type="radio" name="t1" value="G"></input></td>
+        <td><input id="notes" type="radio" name="t2" value="G"></input></td>
+        <td><input id="notes" type="radio" name="t3" value="G"></input></td>
+        <td><input id="notes" type="radio" name="t4" value="G"></input></td>
+        <td><input id="notes" type="radio" name="t5" value="G"></input></td>
+        <td><input id="notes" type="radio" name="t6" value="G"></input></td>
+        <td><input id="notes" type="radio" name="t7" value="G"></input></td>
+        <td><input id="notes" type="radio" name="t8" value="G"></input></td>
+      </tr>
+      <tr>
+        <td><input id="notes" type="radio" name="t1" value="F"></input></td>
+        <td><input id="notes" type="radio" name="t2" value="F"></input></td>
+        <td><input id="notes" type="radio" name="t3" value="F"></input></td>
+        <td><input id="notes" type="radio" name="t4" value="F"></input></td>
+        <td><input id="notes" type="radio" name="t5" value="F"></input></td>
+        <td><input id="notes" type="radio" name="t6" value="F"></input></td>
+        <td><input id="notes" type="radio" name="t7" value="F"></input></td>
+        <td><input id="notes" type="radio" name="t8" value="F"></input></td>
+      </tr>
+      <tr>
+        <td><input id="notes" type="radio" name="t1" value="E"></input></td>
+        <td><input id="notes" type="radio" name="t2" value="E"></input></td>
+        <td><input id="notes" type="radio" name="t3" value="E"></input></td>
+        <td><input id="notes" type="radio" name="t4" value="E"></input></td>
+        <td><input id="notes" type="radio" name="t5" value="E"></input></td>
+        <td><input id="notes" type="radio" name="t6" value="E"></input></td>
+        <td><input id="notes" type="radio" name="t7" value="E"></input></td>
+        <td><input id="notes" type="radio" name="t8" value="E"></input></td>
+      </tr>
+      <tr>
+        <td><input id="notes" type="radio" name="t1" value="D"></input></td>
+        <td><input id="notes" type="radio" name="t2" value="D"></input></td>
+        <td><input id="notes" type="radio" name="t3" value="D"></input></td>
+        <td><input id="notes" type="radio" name="t4" value="D"></input></td>
+        <td><input id="notes" type="radio" name="t5" value="D"></input></td>
+        <td><input id="notes" type="radio" name="t6" value="D"></input></td>
+        <td><input id="notes" type="radio" name="t7" value="D"></input></td>
+        <td><input id="notes" type="radio" name="t8" value="D"></input></td>
+      </tr>
+      <tr>
+        <td><input id="notes" type="radio" name="t1" value="C"></input></td>
+        <td><input id="notes" type="radio" name="t2" value="C"></input></td>
+        <td><input id="notes" type="radio" name="t3" value="C"></input></td>
+        <td><input id="notes" type="radio" name="t4" value="C"></input></td>
+        <td><input id="notes" type="radio" name="t5" value="C"></input></td>
+        <td><input id="notes" type="radio" name="t6" value="C"></input></td>
+        <td><input id="notes" type="radio" name="t7" value="C"></input></td>
+        <td><input id="notes" type="radio" name="t8" value="C"></input></td>
+      </tr>
+    </table>
+  </div>
+</div>
+  <script src="/javascripts/client.js"></script>
+</body>
+
+</html>

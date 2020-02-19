@@ -1,0 +1,148 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height: 100%;
+  margin:0px;
+}
+
+td /* Toutes les cellules des tableaux... */
+{
+  border: 1px solid #494949; /* auront une bordure de 1px */
+  text-align: center;
+  padding:0;
+}
+
+table
+{
+    border-collapse: collapse; /* Les bordures du tableau seront collées (plus joli) */
+    height: 100%;
+    width:100%;
+}
+
+
+/*INPUT STYLING*/
+input{
+width:100%;
+margin:0;
+height:100%;
+opacity:0;
+}
+input:checked{
+  opacity:1;
+}
+input[type="radio"]:checked:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0%;
+}
+input[value="U"]:checked:before {
+  background:#f44336;
+}
+input[value="B"]:checked:before {
+  background:#FF9800;
+}
+input[value="A"]:checked:before {
+  background:#FFEB3B;
+}
+input[value="G"]:checked:before {
+  background:#8BC34A;
+}
+input[value="F"]:checked:before {
+  background:#009688;
+}
+input[value="E"]:checked:before {
+  background:#00BCD4;
+}
+input[value="D"]:checked:before {
+  background:#2196F3;
+}
+input[value="C"]:checked:before {
+  background:#673AB7;
+}
+/*END OF INPUT STYLING*/
+
+#container{
+  height: 80%;
+}
+
+#input_panel{
+  height: 100%;
+  padding-top: 0.5%;
+  color:blue;
+}
+
+#control_panel{
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+}
+
+/*TOP BUTTONS STYLING*/
+.button{
+  font-family: 'Courier New', Courier, monospace;
+  text-decoration: none;
+  font-size: xx-large;
+  color: #494949;
+
+  padding: 20px;
+  border: 4px solid #494949 !important;
+  display: inline-block;
+  font-weight: bold;
+}
+.button:hover {
+  color: #ffffff !important;
+  background: #494949;
+  border-color: #494949 !important;
+  transition: all 0.2s ease 0s;
+  font-weight: bold;
+}
+/*END TOP BUTTONS STYLING*/
+
+.slidecontainer {
+  width: 200px; /* Width of the outside container */
+  display: inline-block;
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 10px; /* Specified height */
+  background: #e9e9e9; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 1; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: .2s;
+  border-radius: 5px;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  background: #d3d3d3; /* Grey background */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 30px; /* Set a specific slider handle width */
+  height: 30px; /* Slider handle height */
+  background-color: white;
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 50%;
+  border: 4px solid #494949 !important;
+  opacity: 1;
+}
+.slider::-moz-range-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 30px; /* Set a specific slider handle width */
+  height: 30px; /* Slider handle height */
+  background-color: white;
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 50%;
+  border: 4px solid #494949 !important;
+  opacity: 1;
+}
